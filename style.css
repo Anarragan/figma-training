@@ -5,9 +5,10 @@
     box-sizing: border-box;
 }
 
-body{
+.todo{
     font-family: sans-serif;
-    margin: 0%;
+    margin-left: auto;
+    margin-right: auto;
 }
 /*contenedor de navegacion*/
 .Navegacion{
@@ -119,44 +120,81 @@ body{
 }
 
 .services{
-    display: flex;
-    flex-direction: column;
-    padding: 10%;
-    position: relative;
-    overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
     min-height: 100vh;
-    align-items: center;
-    gap: 5%;
     background-color: white;
+    padding-top: 0%;
+    padding: 5%;
+    gap: 5%;
 }
+
+/*services text*/
 #serv{
-    color: #B28B12;
+    color: #B28B12;    
 }
 .services h2{
     color: #1F3B63;
-    font-size: 40px;
+    font-size: 60px;
 }
 .services p{
+    font-size: 20px;
     color: #717275;
 }
 
 .services img{
-    width: 30%;
+    width: 40vh;
     border-radius: 20px;
+}
+
+/*divs con la informacion*/
+.primero{
+    display: grid;
+    grid-column: 1/5;
+    justify-content: center;
+    align-items: center;
 }
 
 .full_bath{
     display: flex;
+    flex-direction: column;
+    grid-column: 1/4;
+    justify-content: center;
+}
+
+.full_bath_img{
+    display: flex;
+    justify-content: center;
+    grid-row-start: 2;
+    grid-column-start: 4;
 }
 
 .full_grooming{
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: column;
+    justify-content: center;
+    grid-column: 2/5;
+}
+
+.full_grooming_img{
+    display: flex;
+    justify-content: center;
+    grid-column-start: 1;
+    grid-row-start: 3;
 }
 .colorimetry{
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    grid-column: 1/4;
 }
-
+.colorimetry_img{
+    display: flex;
+    justify-content: center;
+    grid-row-start: 4;
+    grid-column-start: 4;
+}
 .Set_Appointment{
     display: flex;
     padding: 15%;
@@ -215,4 +253,22 @@ button{
 footer{
     text-align: center;
     padding: 40px;
+}
+
+/*responsive desing*/
+
+@media (max-width: 475px) {
+   .Navegacion{
+    justify-content: space-evenly;
+
+   } 
+
+   .formulario{
+    width: 350px;
+   }
+
+   input{
+    width: 250px;
+    
+   }
 }
