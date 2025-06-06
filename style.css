@@ -257,18 +257,79 @@ footer{
 
 /*responsive desing*/
 
-@media (max-width: 475px) {
-   .Navegacion{
-    justify-content: space-evenly;
+@media (max-width: 768px) {
+  .Navegacion {
+    flex-direction: column;
+    align-items: center;
+  }
 
-   } 
+  .Navegacion ul {
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 0;
+  }
 
-   .formulario{
-    width: 350px;
-   }
+  .perrito_arriba img {
+    margin: 0;
+  }
 
-   input{
-    width: 250px;
-    
-   }
+  .services {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5%;
+  }
+
+  .services img {
+    width: 80%;
+  }
+
+  .services h2 {
+    font-size: 32px;
+    text-align: center;
+  }
+
+  .services p {
+    font-size: 18px;
+    text-align: center;
+  }
+  .informacion {
+    margin-left: 5%;
+    margin-right: 5%;
+    gap: 30px;
+  }
+
+  .textos h2 {
+    font-size: 32px;
+  }
+
+  .textos p {
+    font-size: 16px;
+  }
+
+  .iconos img {
+    width: 30px;
+  }
+
+  .perritos_de_home {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .perritos_de_home img {
+    width: 40px;
+  }
+  .formulario {
+    width: 100%;
+    padding: 20px;
+  }
+
+  input {
+    width: 90%;
+  }
+
+  button {
+    width: 80%;
+  }
 }
